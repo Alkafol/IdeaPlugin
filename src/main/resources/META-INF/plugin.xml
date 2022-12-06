@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.devtools.plugin.timemanagerplugin</id>
+    <name>Time manager</name>
+    <vendor email="support@mycompany.com" url="https://www.mycompany.com">MyCompany</vendor>
+
+    <description>Plugin for time management that helps to distract less</description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <statusBarWidgetFactory id="TimerWidget" implementation="com.devtools.plugin.WidgetFactory"/>
+    </extensions>
+
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.devtools.plugin.TimerWindow" class="com.devtools.plugin.TimerWindow" text="Com.Devtools.Plugin.TimerWindow" description="Open window with timer settings">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt O" second-keystroke="alt O"/>
+        </action>
+    </actions>
+</idea-plugin>
